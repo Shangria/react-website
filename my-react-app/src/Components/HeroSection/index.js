@@ -40,7 +40,6 @@ const HeroSection=()=>{
                                 onMouseLeave={onHover}>
                             Get started {hover ? <ArrowForward />: <ArrowRight />}
                         </Button>
-
                     </HeroBtnWrapper>
                 </HeroContent>
             </HeroContainer>

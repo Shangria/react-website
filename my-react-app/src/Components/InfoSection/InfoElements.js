@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InfoContainer = styled.div`
   color: white;
-  background: ${({lightBg}) => (lightBg ? '#f9ff9f9' : '010606')};
+  background: ${({lightBg}) => (lightBg ? '#f9ff9f9' : '#010606')};
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -25,10 +25,10 @@ export const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-content: center;
-  grid-template-areas: ${({imgStart}) => (imgStart ? 'col2 col1' : 'col1 col2')};
+  grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1' 'col2'  'col2' 'col2'`)};
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
   }
 `
 
@@ -86,7 +86,7 @@ export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
 `
-export const Img = styled.div`
+export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding: 0;
