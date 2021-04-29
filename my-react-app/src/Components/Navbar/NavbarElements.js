@@ -4,7 +4,7 @@ import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkScroll} from 'react-scroll';
 
 export const Nav = styled.nav`
-  background: black;
+  background: ${({scrollNav})=>(scrollNav ? '#01BF71': 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -83,13 +83,14 @@ export const NavLinks = styled(LinkScroll)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #fff;
   }
 `;
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
+  
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -108,6 +109,7 @@ export const NavBtnLink = styled(LinkR)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  box-shadow: 1px 0px 8px 0px rgba(11, 11, 11, 0.58);
   
   &:hover{
     transition: all 0.2s ease-in-out;
